@@ -1,5 +1,5 @@
 const accountSid = 'AC1114314f4b2cb9f365ddc6128d1ed635';
-const authToken = '10985643f1ea3114eb2d28e1a4f7ad37';
+const authToken = 'd9ca68f436ed64d12b2419a44073d84b';
 const client = require('twilio')(accountSid, authToken);
 const {validacion_phone,validarCorreoElectronico} = require("../util/validacion")
 const nodemailer = require("nodemailer");
@@ -12,8 +12,8 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-        user: "guaman1579@gmail.com",
-        pass: 'udtvzelfzbotcobj'
+        user: "trailermovil66@gmail.com",
+        pass: 'nrpqbljogyncqnnt'
     }
 });
 class TwilioProvider
@@ -27,6 +27,7 @@ class TwilioProvider
                 //var respuesta = null
                 if(validacion_phone(usuarios[i]))
                 {
+                    console.log(usuarios[i] +" : VALIDO")
                     await client.messages
                         .create({
                             body: body,
