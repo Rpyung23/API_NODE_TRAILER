@@ -1,5 +1,5 @@
 const accountSid = 'AC1114314f4b2cb9f365ddc6128d1ed635';
-const authToken = '28bbd43934ca2d8c0f9846a057c59fef';
+const authToken = '3a8b843d452efb00da0ccc6e3bed4d3f';
 const client = require('twilio')(accountSid, authToken);
 
 const {validacion_phone,validarCorreoElectronico} = require("../util/validacion")
@@ -43,6 +43,7 @@ class TwilioProvider
             }
             return {errorMessage:null,errorCode:null}
         }catch (e) {
+            console.log(e)
             return {errorMessage:e.toString(),errorCode:666}
         }
     }
