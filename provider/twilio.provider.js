@@ -1,6 +1,7 @@
 const accountSid = 'AC1114314f4b2cb9f365ddc6128d1ed635';
-const authToken = 'd9ca68f436ed64d12b2419a44073d84b';
+const authToken = '28bbd43934ca2d8c0f9846a057c59fef';
 const client = require('twilio')(accountSid, authToken);
+
 const {validacion_phone,validarCorreoElectronico} = require("../util/validacion")
 const nodemailer = require("nodemailer");
 const NUMERO_TELEFONO_WHATSAPP = 'whatsapp:+14155238886'
